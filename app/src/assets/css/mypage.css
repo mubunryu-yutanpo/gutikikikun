@@ -1,0 +1,209 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* レイアウト */
+.layout{
+    display: flex;
+    flex-direction: row-reverse;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.header{
+    background: #fff;
+    border: 1px solid #cccc;
+    font-size: 20px;
+    padding: 25px 15px 25px 40px;
+    width: 100%;
+}
+
+/* メイン */
+
+.main{
+    background: #ccc;
+    margin: 0 auto;
+    padding: 50px 60px;
+    width: 85%;
+}
+
+.message-outputs{
+    height: 100%;
+}
+
+.message-container {
+    border-radius: 15px;
+    box-shadow: 0 0 8px #ccc;
+    background: #f9f9f9;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    overflow-y: auto;
+    padding: 30px 40px 0;
+    position: relative;
+}
+
+/* メッセージのデフォルトスタイル */
+
+.message {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.message-text{
+    border-radius: 5px;
+    color: #000;
+    padding: 10px 15px;
+    word-break: break-word;
+}
+
+.thumbnail{
+    border-radius: 100%;
+    box-shadow: 0 0 8px #ccc;
+    height: 45px;
+    width: 45px;
+}
+
+/* 自分のメッセージ（右側） */
+
+.message.user{
+    flex-direction: row-reverse;
+}
+
+.message-text.user {
+    background: #e2e2ff;
+    margin-right: 15px;
+}
+
+/* Difyのメッセージ（左側） */
+
+.message-text.partner{
+    background: #fff;
+    margin-left: 15px;
+}
+
+/* 入力エリアのスタイル */
+
+.input-wrap{
+    background: #f9f9f9;
+    bottom: 0;
+    height: 100px;
+    left: 0;
+    margin: 0 auto;
+    padding: 0 0 15px 0;
+    position: sticky;
+    width: 100%;
+    z-index: 10;
+}
+
+.form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 4px #ccc;
+    margin: 30px 0 15px;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-area{
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: calc(100% - 50px);
+}
+
+.input-area:focus{
+    outline: none;
+}
+
+.submit{
+    background: #b9b9ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 45px;
+    padding: 10px;
+    width: 45px;
+}
+
+
+.submit-icon{
+    height: 100%;
+    transition: all .3s;
+    width: 100%;
+}
+
+.submit-icon:hover{
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+.submit:disabled {
+    background-color: #888;
+}
+
+/* サイドバー */
+
+.side{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    min-width: 220px;
+    padding: 30px 20px;
+    position: relative;
+    width: 15%;
+}
+
+.side-button{
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: calc(100% - 50px);
+}
+
+.new-chat-button{
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #b9b9ff;
+    margin: 50px auto 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.history-button{
+    background: #b9b9ff;
+    border: none;
+    color: #000;
+    margin: 0 auto 30px;
+}
+
+.histories{
+    margin: 0 auto 30px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.history-title{
+    margin: 0 0 10px;
+}
+
+.footer{
+    bottom: 30px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
